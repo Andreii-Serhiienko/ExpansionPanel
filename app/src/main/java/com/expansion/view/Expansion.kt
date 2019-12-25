@@ -224,7 +224,7 @@ class Expansion : FrameLayout {
         }
     }
 
-    private fun createExpandableHeight() {
+    public fun createExpandableHeight() {
         if (expandableView == null) return
 
         val wm = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
@@ -237,7 +237,7 @@ class Expansion : FrameLayout {
         expandableHeight = expandableView?.measuredHeight ?: 0
     }
 
-    private fun resetExpandableHeight() {
+    public fun resetExpandableHeight() {
         expandableView?.let {
             val expandableViewParams = it.layoutParams as LayoutParams
             expandableViewParams.setMargins(0, collapsedViewHeight, 0, 0)
